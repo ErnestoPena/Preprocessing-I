@@ -49,11 +49,167 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+//Variables
+
+@font-color: #777;
+@my-font: 'Lato', san-serif;
+@div-color: rgb(238, 235, 231);
+
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 100%;
 }
 
+.main-nav {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-end; 
+	height: 50px;
+	background-color: rgb(230, 219, 219);
+	padding-bottom: 7px
+}
+
+a {
+	font-size: 1.3rem; 
+	text-decoration: none;
+	text-transform: uppercase;
+	color: @font-color;
+	padding: 8px 15px;
+}
+
+a:hover {
+	border: black 1px solid;
+	padding: 8px 15px;
+	background-color: azure;
+}
+
+
+a:last-child {
+	margin-right: 350px;
+}
+
+.section-top {
+	width:100%;
+	background-color: aqua;
+	background-image: url(../img/bg.jpg);
+	height: 30px;
+}
+
+.container-top {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: row;
+	max-width: 70%;
+	background-color: @div-color;
+}
+
+.container-bottom {
+	margin-top: 20px;
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 70%;
+	background-color:@div-color;
+}
+
+.container-top-item {
+	position: relative;
+	width: 50%;
+	margin-top: 20px;
+	margin: 20px 
+}
+
+.image-top {
+	width:100%;
+	height: auto;
+}
+
+h1 {
+	font-family: @my-font;
+	font-size: 2.5rem;
+	text-align: left;
+}
+
+h2 {
+	font-family: @my-font;
+	font-size: 1.6rem;
+	text-align: left;
+	color: crimson;
+	padding-bottom: 10px;
+	border-bottom: #777 solid;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+p {
+	font-family: @my-font;
+	font-size: 1.1rem;
+	margin: 20px 20px 20px 0px;
+	text-align: justify; 
+	line-height: 1.5;
+}
+
+.my-button {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	font-family: @my-font;
+	font-size: 1.2rem;
+	width: 230px;
+	height: 60px;
+	background-color: rgb(42, 218, 42);
+	color: black;
+}
+
+table {
+	margin-top: 10px;
+	margin-left: 10px;
+	font-family: @my-font;
+	border-collapse: collapse;
+	width: 98%;
+  }
+  
+  td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;	
+  }
+
+  tr:nth-child(even) {
+	background-color: #dddddd;
+  }
+
+  tr:first-child {
+	  font-size: 1.1rem;
+	  font-weight: 700;
+	  text-align: center;
+	  border-bottom: 1px solid black;
+  }
+
+  .container-footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 70%;
+	background-color:@div-color;
+	text-align: center;
+	height: 50px;
+	vertical-align: middle;
+}
+
+  h3 {
+	  font-size: 0.9rem;
+	  margin: 10px 0px;
+  }
