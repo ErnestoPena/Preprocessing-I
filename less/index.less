@@ -220,10 +220,15 @@ html, body {
 
 				.container-top-item {
 					position: relative;
-					width: 96%;
+					width: 100%;
 					margin-top: 20px;
 					margin: 0px;
 					padding:10px; 
+					text-align: center;
+				}
+
+				h1, h2 {
+					text-align: center;
 				}
 
 				p {
@@ -238,6 +243,19 @@ html, body {
 					font-size: 1.2rem;
 					margin-top: 15px;
 				}
+
+				.history-table {
+					margin: 5px;
+					font-family: @my-font;
+					border-collapse: collapse;
+					width: 95%;
+				  }
+		
+				  tr:first-child {
+					font-size: 1.0rem;
+					font-weight: 600;
+					text-align: center;
+				}
 			
 			}
 }
@@ -251,9 +269,15 @@ html, body {
 	width: 70%;
 	background-color:@div-color;
 
+	h2 {
+		.h2-mixin();
+	 }
+
+
 	@media (max-width: @device-width) {
-	display: flex;
+	    display: flex;
 		flex-direction: column;
+		align-items: center;
 
 		.container-bottom {
 			width:100%;
@@ -270,12 +294,24 @@ html, body {
 		 h2 {
 			.h2-mixin();
 		 }
+
+		 .history-table {
+			margin: 5px;
+			font-family: @my-font;
+			border-collapse: collapse;
+			width: 95%;
+		  }
+
+		  tr:first-child {
+			font-size: 1.0rem;
+			font-weight: 600;
+			text-align: center;
+		}
 	}
 }
 
-table {
-	margin-top: 10px;
-	margin-left: 10px;
+.history-table {
+	margin: 5px;
 	font-family: @my-font;
 	border-collapse: collapse;
 	width: 98%;
@@ -295,7 +331,6 @@ table {
 	  font-size: 1.1rem;
 	  font-weight: 700;
 	  text-align: center;
-	  border-bottom: 1px solid black;
   }
 
   .container-footer {
@@ -306,19 +341,15 @@ table {
 	margin-bottom: 10px;
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 70%;
+	width: 70%;
 	background-color:@div-color;
 	text-align: center;
 	height: 50px;
 	vertical-align: middle;
+
+		h3 {
+			font-size: 0.9rem;
+			margin: 10px 0px;
+		}
+
 }
-
-  h3 {
-	  font-size: 0.9rem;
-	  margin: 10px 0px;
-  }
-
-  h2 {
-	.h2-mixin();
- }
-  
