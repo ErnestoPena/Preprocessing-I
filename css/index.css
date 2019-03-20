@@ -1,1 +1,386 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
+.main-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 50px;
+  background-color: #e6dbdb;
+  padding-bottom: 7px;
+}
+.main-nav a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #777;
+  padding: 7px 13px;
+}
+.main-nav a:hover {
+  border: black 1px solid;
+  padding: 7px 13px;
+  background-color: azure;
+  border-radius: 5%;
+}
+.main-nav a:last-child {
+  margin-right: 350px;
+}
+@media (max-width: 500px) {
+  .main-nav .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #777;
+    padding: 7px 13px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+  .main-nav a:last-child {
+    margin-right: auto;
+  }
+}
+.section-top {
+  width: 100%;
+  background-color: aqua;
+  background-image: url(../img/bg.jpg);
+  height: 30px;
+}
+.container-top {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  background-color: #eeebe7;
+}
+.container-top .image-top {
+  width: 100%;
+  height: auto;
+}
+.container-top .container-top-item {
+  position: relative;
+  width: 50%;
+  margin-top: 20px;
+  margin: 20px;
+}
+.container-top h1 {
+  font-family: 'Lato', san-serif;
+  font-size: 2.5rem;
+  text-align: left;
+}
+.container-top h2 {
+  font-family: 'Lato', san-serif;
+  font-size: 1.6rem;
+  text-align: left;
+  color: crimson;
+  padding-bottom: 10px;
+  border-bottom: #777 solid;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+.container-top p {
+  font-family: 'Lato', san-serif;
+  font-size: 1.1rem;
+  margin: 20px 20px 20px 0px;
+  text-align: justify;
+  line-height: 1.5;
+}
+.container-top .my-button {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  font-family: 'Lato', san-serif;
+  font-size: 1.2rem;
+  width: 230px;
+  height: 60px;
+  background-color: #2ada2a;
+  color: black;
+}
+@media (max-width: 500px) {
+  .container-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-top .container-top {
+    width: 100%;
+  }
+  .container-top .container-top-item {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+  }
+  .container-top h1,
+  .container-top h2 {
+    text-align: center;
+  }
+  .container-top p {
+    font-family: 'Lato', san-serif;
+    font-size: 1.1rem;
+    margin: 20px 20px 20px 0px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  .container-top .my-button {
+    position: relative;
+    bottom: 8px;
+    font-family: 'Lato', san-serif;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+  .container-top .history-table {
+    margin: 5px;
+    font-family: 'Lato', san-serif;
+    border-collapse: collapse;
+    width: 95%;
+  }
+  .container-top tr:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+.container-bottom {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-color: #eeebe7;
+}
+.container-bottom h2 {
+  font-family: 'Lato', san-serif;
+  font-size: 1.6rem;
+  text-align: left;
+  color: crimson;
+  padding-bottom: 10px;
+  border-bottom: #777 solid;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+@media (max-width: 500px) {
+  .container-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container-bottom .container-bottom {
+    width: 100%;
+  }
+  .container-bottom .container-top-item {
+    position: relative;
+    width: 96%;
+    margin-top: 20px;
+    margin: 0px;
+    padding: 10px;
+  }
+  .container-bottom h2 {
+    font-family: 'Lato', san-serif;
+    font-size: 1.6rem;
+    text-align: left;
+    color: crimson;
+    padding-bottom: 10px;
+    border-bottom: #777 solid;
+    margin-top: 10px;
+    margin-left: 5px;
+  }
+  .container-bottom .history-table {
+    margin: 5px;
+    font-family: 'Lato', san-serif;
+    border-collapse: collapse;
+    width: 95%;
+  }
+  .container-bottom tr:first-child {
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+}
+.history-table {
+  margin: 5px;
+  font-family: 'Lato', san-serif;
+  border-collapse: collapse;
+  width: 98%;
+}
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+tr:first-child {
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.container-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  background-color: #eeebe7;
+  text-align: center;
+  height: 50px;
+  vertical-align: middle;
+}
+.container-footer h3 {
+  font-size: 0.9rem;
+  margin: 10px 0px;
+}
