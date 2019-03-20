@@ -75,6 +75,20 @@ table {
 	justify-content: flex-end; 
 }
 
+
+//Mixin for h2
+
+.h2-mixin() {
+	font-family: @my-font;
+	font-size: 1.6rem;
+	text-align: left;
+	color: crimson;
+	padding-bottom: 10px;
+	border-bottom: #777 solid;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -175,14 +189,7 @@ html, body {
 			}
 			
 			h2 {
-				font-family: @my-font;
-				font-size: 1.6rem;
-				text-align: left;
-				color: crimson;
-				padding-bottom: 10px;
-				border-bottom: #777 solid;
-				margin-top: 10px;
-				margin-left: 5px;
+				.h2-mixin();
 			}
 			
 			p {
@@ -261,15 +268,8 @@ html, body {
 		 }
 
 		 h2 {
-			font-family: @my-font;
-			font-size: 1.6rem;
-			text-align: left;
-			color: crimson;
-			padding-bottom: 10px;
-			border-bottom: #777 solid;
-			margin-top: 10px;
-			margin-left: 5px;
-	
+			.h2-mixin();
+		 }
 	}
 }
 
