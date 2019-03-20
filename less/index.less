@@ -54,6 +54,26 @@ table {
 @font-color: #777;
 @my-font: 'Lato', san-serif;
 @div-color: rgb(238, 235, 231);
+@device-width : 500px;
+
+//mixin for paragraph
+
+.paragraph_mixin() {
+	font-family: @my-font;
+	font-size: 1.1rem;
+	margin: 20px 20px 20px 0px;
+	text-align: justify; 
+	line-height: 1.5;
+}
+
+//mixin for flex
+
+.flex-row-mixin() {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: flex-end; 
+}
 
 * {
 	box-sizing: border-box;
@@ -65,32 +85,59 @@ html, body {
 }
 
 .main-nav {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	justify-content: flex-end; 
+	.flex-row-mixin();
 	height: 50px;
 	background-color: rgb(230, 219, 219);
-	padding-bottom: 7px
-}
+	padding-bottom: 7px;
 
-a {
-	font-size: 1.3rem; 
-	text-decoration: none;
-	text-transform: uppercase;
-	color: @font-color;
-	padding: 8px 15px;
-}
+		a {
+			font-size: 1.2rem; 
+			text-decoration: none;
+			text-transform: uppercase;
+			color: @font-color;
+			padding: 7px 13px;
+		}
 
-a:hover {
-	border: black 1px solid;
-	padding: 8px 15px;
-	background-color: azure;
-}
+		a:hover {
+			border: black 1px solid;
+			padding: 7px 13px;
+			background-color: azure;
+			border-radius: 5%;
+		}
 
+		a:last-child {
+			margin-right: 350px;
+		}
 
-a:last-child {
-	margin-right: 350px;
+		@media (max-width: @device-width) {
+
+			.main-nav {
+				display: flex;
+			    flex-direction: column;
+			    align-items: center;
+				height: auto;
+				flex-wrap: wrap;
+			}
+
+			a {
+				font-size: 1.0rem; 
+				text-decoration: none;
+				text-transform: uppercase;
+				color: @font-color;
+				padding: 7px 13px;
+				margin-right: auto;
+				margin-left: auto;
+				display: block;
+			}
+
+			a:last-child {
+				margin-right: auto;
+				margin-right: auto;
+			}
+	
+		
+		}
+
 }
 
 .section-top {
@@ -106,8 +153,86 @@ a:last-child {
 	margin-right: auto;
 	display: flex;
 	flex-direction: row;
-	max-width: 70%;
+	width: 70%;
 	background-color: @div-color;
+
+	.image-top {
+		width:100%;
+		height: auto;
+	}
+
+	.container-top-item {
+		position: relative;
+		width: 50%;
+		margin-top: 20px;
+		margin: 20px 
+	}
+
+			h1 {
+				font-family: @my-font;
+				font-size: 2.5rem;
+				text-align: left;
+			}
+			
+			h2 {
+				font-family: @my-font;
+				font-size: 1.6rem;
+				text-align: left;
+				color: crimson;
+				padding-bottom: 10px;
+				border-bottom: #777 solid;
+				margin-top: 10px;
+				margin-left: 5px;
+			}
+			
+			p {
+				.paragraph_mixin();
+			}
+
+			.my-button {
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				font-family: @my-font;
+				font-size: 1.2rem;
+				width: 230px;
+				height: 60px;
+				background-color: rgb(42, 218, 42);
+				color: black;
+			}
+
+			@media (max-width: @device-width) {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+
+                .container-top {
+                   width:100%;
+				}
+
+				.container-top-item {
+					position: relative;
+					width: 96%;
+					margin-top: 20px;
+					margin: 0px;
+					padding:10px; 
+				}
+
+				p {
+					.paragraph_mixin();
+					margin-bottom: 25px;
+				}
+
+				.my-button {
+					position: relative;
+					bottom: 8px;
+					font-family: @my-font;
+					font-size: 1.2rem;
+					margin-top: 15px;
+				}
+			
+			}
 }
 
 .container-bottom {
@@ -116,57 +241,26 @@ a:last-child {
 	margin-right: auto;
 	display: flex;
 	flex-direction: column;
-	max-width: 70%;
+	width: 70%;
 	background-color:@div-color;
-}
 
-.container-top-item {
-	position: relative;
-	width: 50%;
-	margin-top: 20px;
-	margin: 20px 
-}
+	@media (max-width: @device-width) {
+	display: flex;
+		flex-direction: column;
 
-.image-top {
-	width:100%;
-	height: auto;
-}
+		.container-bottom {
+			width:100%;
+		 }
 
-h1 {
-	font-family: @my-font;
-	font-size: 2.5rem;
-	text-align: left;
-}
-
-h2 {
-	font-family: @my-font;
-	font-size: 1.6rem;
-	text-align: left;
-	color: crimson;
-	padding-bottom: 10px;
-	border-bottom: #777 solid;
-	margin-top: 10px;
-	margin-left: 5px;
-}
-
-p {
-	font-family: @my-font;
-	font-size: 1.1rem;
-	margin: 20px 20px 20px 0px;
-	text-align: justify; 
-	line-height: 1.5;
-}
-
-.my-button {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	font-family: @my-font;
-	font-size: 1.2rem;
-	width: 230px;
-	height: 60px;
-	background-color: rgb(42, 218, 42);
-	color: black;
+		 .container-top-item {
+			 position: relative;
+			 width: 96%;
+			 margin-top: 20px;
+			 margin: 0px; 
+			 padding:10px;
+		 }
+	
+	}
 }
 
 table {
@@ -213,3 +307,5 @@ table {
 	  font-size: 0.9rem;
 	  margin: 10px 0px;
   }
+
+  

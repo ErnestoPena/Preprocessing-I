@@ -144,20 +144,43 @@ body {
   background-color: #e6dbdb;
   padding-bottom: 7px;
 }
-a {
-  font-size: 1.3rem;
+.main-nav a {
+  font-size: 1.2rem;
   text-decoration: none;
   text-transform: uppercase;
   color: #777;
-  padding: 8px 15px;
+  padding: 7px 13px;
 }
-a:hover {
+.main-nav a:hover {
   border: black 1px solid;
-  padding: 8px 15px;
+  padding: 7px 13px;
   background-color: azure;
+  border-radius: 5%;
 }
-a:last-child {
+.main-nav a:last-child {
   margin-right: 350px;
+}
+@media (max-width: 500px) {
+  .main-nav .main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    flex-wrap: wrap;
+  }
+  .main-nav a {
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #777;
+    padding: 7px 13px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+  .main-nav a:last-child {
+    margin-right: auto;
+  }
 }
 .section-top {
   width: 100%;
@@ -171,34 +194,25 @@ a:last-child {
   margin-right: auto;
   display: flex;
   flex-direction: row;
-  max-width: 70%;
+  width: 70%;
   background-color: #eeebe7;
 }
-.container-bottom {
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  max-width: 70%;
-  background-color: #eeebe7;
+.container-top .image-top {
+  width: 100%;
+  height: auto;
 }
-.container-top-item {
+.container-top .container-top-item {
   position: relative;
   width: 50%;
   margin-top: 20px;
   margin: 20px;
 }
-.image-top {
-  width: 100%;
-  height: auto;
-}
-h1 {
+.container-top h1 {
   font-family: 'Lato', san-serif;
   font-size: 2.5rem;
   text-align: left;
 }
-h2 {
+.container-top h2 {
   font-family: 'Lato', san-serif;
   font-size: 1.6rem;
   text-align: left;
@@ -208,14 +222,14 @@ h2 {
   margin-top: 10px;
   margin-left: 5px;
 }
-p {
+.container-top p {
   font-family: 'Lato', san-serif;
   font-size: 1.1rem;
   margin: 20px 20px 20px 0px;
   text-align: justify;
   line-height: 1.5;
 }
-.my-button {
+.container-top .my-button {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -225,6 +239,64 @@ p {
   height: 60px;
   background-color: #2ada2a;
   color: black;
+}
+@media (max-width: 500px) {
+  .container-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .container-top .container-top {
+    width: 100%;
+  }
+  .container-top .container-top-item {
+    position: relative;
+    width: 96%;
+    margin-top: 20px;
+    margin: 0px;
+    padding: 10px;
+  }
+  .container-top p {
+    font-family: 'Lato', san-serif;
+    font-size: 1.1rem;
+    margin: 20px 20px 20px 0px;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 25px;
+  }
+  .container-top .my-button {
+    position: relative;
+    bottom: 8px;
+    font-family: 'Lato', san-serif;
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+}
+.container-bottom {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  background-color: #eeebe7;
+}
+@media (max-width: 500px) {
+  .container-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .container-bottom .container-bottom {
+    width: 100%;
+  }
+  .container-bottom .container-top-item {
+    position: relative;
+    width: 96%;
+    margin-top: 20px;
+    margin: 0px;
+    padding: 10px;
+  }
 }
 table {
   margin-top: 10px;
